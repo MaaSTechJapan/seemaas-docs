@@ -1,0 +1,17 @@
+[plantuml]
+....
+scale 2.0
+
+(Node) as N1
+(Node) as N2
+
+N1 --right--> N2: Edge
+
+legend center
+  Load
+endlegend
+
+legend center
+  Transportation
+endlegend
+....
