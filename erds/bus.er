@@ -1,0 +1,173 @@
+# title {label: "TraIIRe::Bus ER diagram", size: "20"}
+
+# Entities
+
+[BusTimetable]
+id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++node {label:"string"}
+arrival_time {label:"string"}
+departure_time {label:"string"}
++transportation {label:"string"}
+operation_calender {label:"string"}
++before_edge {label:"string"}
++next_edge {label:"string"}
+drop_off_type {label:"int"}
+pickup_type {label:"int"}
+order {label:"int64"}
++from_node {label:"string"}
++to_node {label:"string"}
++graph {label:"string"}
++operator {label:"string"}
+additional {label:"dictionary"}
+
+
+[Operator]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+additional {label:"dictionary"}
+
+[Transportation]
+*id {label:"string"}
+title {label:"string"}
+type {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+additional {label:"dictionary"}
+
+[BusroutePattern]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+edges {label:"array[Road]"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Busroute]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Road]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+
+[Busstop]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Busstoppole]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+
+[Load]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++origin_node {label:"string"}
++destination_node {label:"string"}
++trips {label:"array[Trip]"}
+additional {label:"dictionary"}
+
+
+[Trip]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
++edges {label:"arraye[Busroute]"}
++transopration {label: "string"}
+additional {label:"dictionary"}
+
+[Leg]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
++timetables {label:"array[timetable]"}
++transportation {label: "string"}
+additional {label:"dictionary"}
+
+# Relationships
+
+Load 1--1 Trip
+Trip 1--+ Leg
+Leg *--1 Transportation
+Transportation 1--+ BusTimetable
+Leg ?--+ BusTimetable
+BusTimetable +--+ Busstop
+BusTimetable +--+ BusroutePattern
+BusTimetable +--+ Operator
+BusTimetable +--+ Busroute
+Busstop 1--+ Busstoppole
+Busstop +--+ Busroute
+Busroute 1--+ Road
+Road +--+ Busstoppole
+BusroutePattern 1--+ Busstoppole
+BusroutePattern +--1 Operator
+

@@ -7,6 +7,8 @@ name = "pypi"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 myst-parser = "*"
+eralchemy = "*"
+pygraphviz = "*"
 
 [dev-packages]
 

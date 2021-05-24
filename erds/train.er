@@ -1,0 +1,172 @@
+# title {label: "TraIIRe::Train ER diagram", size: "20"}
+
+# Entities
+
+[TrainTimetable]
+id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++node {label:"string"}
+arrival_time {label:"string"}
+departure_time {label:"string"}
++transportation {label:"string"}
+operation_calender {label:"string"}
++before_edge {label:"string"}
++next_edge {label:"string"}
+drop_off_type {label:"int"}
+pickup_type {label:"int"}
+order {label:"int64"}
++from_node {label:"string"}
++to_node {label:"string"}
++graph {label:"string"}
++operator {label:"string"}
+additional {label:"dictionary"}
+
+
+[Operator]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+additional {label:"dictionary"}
+
+[Transportation]
+*id {label:"string"}
+title {label:"string"}
+type {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+additional {label:"dictionary"}
+
+[OperationRailway]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+edges {label:"array[edge]"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Railway]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Railroad]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+
+[Station]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Platform]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+
+[Load]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++origin_node {label:"string"}
++destination_node {label:"string"}
++trips {label:"array[Trip]"}
+additional {label:"dictionary"}
+
+
+[Trip]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
++edges {label:"arraye[Railway]"}
++transopration {label: "string"}
+additional {label:"dictionary"}
+
+[Leg]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
++timetables {label:"array[timetable]"}
++transportation {label: "string"}
+additional {label:"dictionary"}
+
+# Relationships
+
+Load 1--1 Trip
+Trip 1--+ Leg
+Leg *--1 Transportation
+Transportation 1--+ TrainTimetable
+Leg ?--+ TrainTimetable
+TrainTimetable +--+ Station
+TrainTimetable +--+ OperationRailway
+TrainTimetable +--+ Operator
+TrainTimetable +--+ Railway
+Station 1--+ Platform
+Station +--+ Railway
+Railway 1--+ Railroad
+Railroad +--+ Platform
+OperationRailway 1--+ Railroad
+OperationRailway +--1 Operator
