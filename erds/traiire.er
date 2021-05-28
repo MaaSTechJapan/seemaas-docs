@@ -32,6 +32,8 @@ type {label:"string"}
 +transportation {label:"string"}
 +operator {label:"string"}
 sequence {label:"int"}
+from_nodetime {label: "string"}
+to_nodetime {label: "string"}
 from_node {label:string}
 to_node {label:string}
 arrival_time {label:"timestamp"}
@@ -104,43 +106,53 @@ additional {label:"dictionary"}
 
 [Load]
 *id {label:"string"}
+title: {label: "string"}
 created {label:"timestamp"}
 issued {label:"timestamp"}
 vaild {label:"timestamp"}
 available {label:"timestamp"}
+title {label:"string"}
 type {label:"string"}
-trip {label:"string"}
+origin_node {label:"string"}
+destination_node {label:"string"}
+gross {label: "float"}
+unit_gross {label: "string"}
 additional {label:"dictionary"}
 
 [Trip]
 *id {label:"string"}
+load {label:"string"}
+sequence {label:"int"}
 created {label:"timestamp"}
 issued {label:"timestamp"}
 vaild {label:"timestamp"}
 available {label:"timestamp"}
+title {label:"string"}
 type {label:"string"}
-+origin_node {label:"string"}
-+destination_node {label:"string"}
-+legs {label:"array[leg]"}
+from_node {label:"string"}
+to_node {label:"string"}
+payment {label:"float"}
+unit_payment{label:"string"}
+transportation {label: "string"}
 additional {label:"dictionary"}
 
 [Leg]
 *id {label:"string"}
+edgetime {label:"string"}
+sequence {label: "int"}
+trip {label:"string"}
 created {label:"timestamp"}
 issued {label:"timestamp"}
 vaild {label:"timestamp"}
 available {label:"timestamp"}
+title {label:"string"}
 type {label:"string"}
-+from_node {label:"string"}
-+to_node {label:"string"}
-+edgetimes {label:"array[edge_timetable]"}
-+transportation {label: "string"}
 additional {label:"dictionary"}
 
 # Relationships
-Load 1--1 Trip
+Load 1--+ Trip
 Trip 1--+ Leg
-Leg *--1 Transportation
+Trip *--1 Transportation
 Leg ?--+ Edgetime
 Transportation 1--+ Edgetime
 Transportation 1--+ Nodetime

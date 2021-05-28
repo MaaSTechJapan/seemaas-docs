@@ -9,6 +9,7 @@ sphinx-rtd-theme = "*"
 myst-parser = "*"
 eralchemy = "*"
 pygraphviz = "*"
+recommonmark = "*"
 
 [dev-packages]
 
