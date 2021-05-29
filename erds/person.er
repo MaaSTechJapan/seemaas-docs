@@ -1,0 +1,46 @@
+# title {label: "TraIIRe::Person ER diagram", size: "20"}
+
+# Entities
+[Person]
+id {label:"STRING"} 
+created {label:"TIMESTAMP"}
+valid {label:"TIMESTAMP"}
+available {label:"TIMESTAMP"}
+type {label:"STRING"}
+origin_node {label:"STRING"}
+destination_node {label:"STRING"}
+additional {label:"JSON Object"}
+
+
+[Human]
+id {label:"STRING"}
+created {label:"TIMESTAMP"}
+available {label:"TIMESTAMP"}
+valid {label:"TIMESTAMP"}
+type {label:"STRING"}
+from_node {label:"STRING"}
+to_node {label:"STRING"}
+person {label:"STRING"}
+fare {label:"INT"}
+unit_fare {label:"STRING"}
+count {label:"INT"}
+unit_count {label:"STRING"}
+order {label:"INT"}
+transportation {label:"STRING"}
+graph {label:"STRING"}
+additional {label:"JSON Object"}
+
+[Leg]
+id {label:"STRING"}
+created {label:"TIMESTAMP"}
+available {label:"TIMESTAMP"}
+valid {label:"TIMESTAMP"}
+type {label:"STRING"}
+from_node {label:"STRING"}
+to_node {label:"STRING"}
+edge {label:"STRING"}
+load {label:"STRING"}
+
+# Relationships
+Person 1--+ Human
+Human 1--+ Leg

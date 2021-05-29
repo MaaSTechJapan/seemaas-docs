@@ -1,0 +1,169 @@
+# title {label: "TraIIRe ER diagram", size: "20"}
+
+# Entities
+
+[Nodetime]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++node {label:"string"}
++graph {label:"string"}
++transportation {label:"string"}
++operator {label:"string"}
+sequence {label:"int"}
+arrival_time {label:"timestamp"}
+departure_time {label:"timestamp"}
+drop_off_type {label:"int"}
+pickup_type {label:"int"}
+additional {label:"dictionary"}
+
+[Edgetime]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+type {label:"string"}
++edge {label:"string"}
++graph {label:"string"}
++transportation {label:"string"}
++operator {label:"string"}
+sequence {label:"int"}
+from_nodetime {label: "string"}
+to_nodetime {label: "string"}
+from_node {label:string}
+to_node {label:string}
+arrival_time {label:"timestamp"}
+departure_time {label:"timestamp"}
+drop_off_type {label:"int"}
+pickup_type {label:"int"}
+additional {label:"dictionary"}
+
+[Operator]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+additional {label:"dictionary"}
+
+[Transportation]
+*id {label:"string"}
+title {label:"string"}
+type {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+from_node {label:"string"}
+to_node {label:"string"}
+calender {label:"string"}
+additional {label:"dictionary"}
+
+[Graph]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+edges {label:"array[edge]"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Edge]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
++from_node {label:"string"}
++to_node {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Node]
+*id {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+geometry {label:"dictionary"}
+geom {label:"well-known-binary(WKB)"}
+additional {label:"dictionary"}
+
+[Load]
+*id {label:"string"}
+title: {label: "string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+origin_node {label:"string"}
+destination_node {label:"string"}
+gross {label: "float"}
+unit_gross {label: "string"}
+additional {label:"dictionary"}
+
+[Trip]
+*id {label:"string"}
+load {label:"string"}
+sequence {label:"int"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+from_node {label:"string"}
+to_node {label:"string"}
+payment {label:"float"}
+unit_payment{label:"string"}
+transportation {label: "string"}
+additional {label:"dictionary"}
+
+[Leg]
+*id {label:"string"}
+edgetime {label:"string"}
+sequence {label: "int"}
+trip {label:"string"}
+created {label:"timestamp"}
+issued {label:"timestamp"}
+vaild {label:"timestamp"}
+available {label:"timestamp"}
+title {label:"string"}
+type {label:"string"}
+additional {label:"dictionary"}
+
+# Relationships
+Load 1--+ Trip
+Trip 1--+ Leg
+Trip *--1 Transportation
+Leg ?--+ Edgetime
+Transportation 1--+ Edgetime
+Transportation 1--+ Nodetime
+Edgetime +--+ Edge
+Edgetime +--+ Graph
+Edgetime +--+ Operator
+Nodetime +--+ Node
+Nodetime +--+ Graph
+Nodetime +--+ Operator
+Edge +--+ Node
+Graph 1--+ Edge
+Graph +--1 Operator
+
+
