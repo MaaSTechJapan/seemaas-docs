@@ -63,6 +63,6 @@ html_static_path = ['_static']
 
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.txt': 'markdown',
-    '.md': 'markdown',
+    # '.txt': 'markdown',
+    # '.md': 'markdown',
 }
