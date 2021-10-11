@@ -16,6 +16,7 @@ TraISARE( **Tra**\nsport \ **I**\nformation \ **S**\tore with \ **A**\ggregator,
    :caption: Contents:
 
    ./sysconfig/index.rst
+   ./rawdata/index.rst
    ./traiire/index.rst
    ./transam/index.rst
  
