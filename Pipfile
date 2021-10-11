@@ -9,7 +9,6 @@ sphinx-rtd-theme = "*"
 myst-parser = "*"
 recommonmark = "*"
 
-
 [dev-packages]
 
 [requires]
