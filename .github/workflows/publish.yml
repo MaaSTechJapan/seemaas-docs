@@ -40,6 +40,7 @@ jobs:
         
     - name: Build html
       run: |
+        pipenv sync
         pipenv run make_html
         
     - name: Archive production artifacts
