@@ -1,41 +1,4 @@
 # docs-traisare::Documents about TraISARE
-# ディレクトリ構成
-```
-├── Makefile
-├── Pipfile
-├── Pipfile.lock
-├── README.md
-├── TraICon
-│   └── index.md
-├── TraIIRe
-│   └── index.md
-├── TraISARE
-│   └── index.md
-├── conf.py
-├── erds
-│   ├── bus.er
-│   ├── person.er
-│   ├── traiire.er
-│   ├── traiire_rev1.er
-│   └── train.er
-├── images
-│   ├── Base.png
-│   ├── Base.puml
-│   ├── SpecFigures.pptx
-│   ├── busroutes.svg
-│   ├── components.png
-│   ├── erd_bus.png
-│   ├── erd_person.png
-│   ├── erd_traiire.png
-│   ├── erd_traiire_rev1.png
-│   ├── erd_train.png
-│   ├── railways-railroads.svg
-│   ├── railways.svg
-│   └── traiire.svg
-├── index.md
-├── index.rst
-├── make.bat
-└── render-erdiagram.py
 ```
 
 # 古いSpecをポートする

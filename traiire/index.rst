@@ -1,6 +1,10 @@
-#######
+###################
+Common Data Formats
+###################
+TraISAREが扱う共通データフォーマット、TraIIReを定義する。
+
 TraIIRe
-#######
+-------
 TraIIRe(**Tra**\nsportation \ **I**\nformation \ **I**\ntermidiate \ **Re**\presentation)はcommonstoreにおけるデータフォーマットである。
 移動履歴に関わる交通データにはICカードやアプリの乗車履歴を基にしたデータ、携帯電話の位置情報を基にした人流データ、自動車プローブデータなどが存在する。
 これらデータは人流を表すデータであるとともに、公共交通インフラを計画する上で重要な基礎データとなりうるものである。
@@ -10,29 +14,11 @@ TraIIRe(**Tra**\nsportation \ **I**\nformation \ **I**\ntermidiate \ **Re**\pres
 乗換及び運行といった旅客案内に関するデータに特化しており、移動履歴を取り扱う統一データフォーマットは未だ存在しない。
 TraISAREはすべて移動データを統一データフォーマット上で扱うことを目的としており、TraIIReはその核となるデータ構造を定義するものである。
 
-Data Category
-*************
-Static Data
-===========
-* Structure Data
-  
-  移動に必要な交通ネットワークを表すデータで駅やバス停の存在と位置を表すデータとそれらのトポロジーを表すデータである。
 
-* Schedule Data
-  
-  移動には必ず乗り物が必要であり、乗り物は計画に従って、あるいは計画を逐次決定しながら移動している。Schedule Dataはこれら計画を表すデータである。
-
-* Transaction Data
-  
-  人が乗り物を使って移動した履歴を表すデータである。
-
-Realtime Data
-=============
-乗り物のリアルタイムな位置や計画に対する遅れの状態といった時々刻々更新されるデータである。
 
 
 Graph Data Structure
-********************
+--------------------
 TraIIReではある場所からある場所に向かって物体が移動手段を使って動くことを移動と定義する。
 この定義から、以下の関係を持たせたとき、そのデータ構造はグラフとグラフ上を動く移動手段で表現できる。
 
@@ -45,15 +31,15 @@ TraIIReではある場所からある場所に向かって物体が移動手段�
 
 
 Class
-**************
+-----
 すべてのClassはEssentialを基底Classとした継承関係にある。
 Classのプロパティに他のClass名が存在するときは、Classのuidを参照しているものとする。
 Class名.Property名という形式でPropertyが記述されたときは、当該Classの当該Propertyを参照しているものとする
 
 (Under construction)
 
-Entity Relationship and Structure
-*********************************
+Entity Relationships and Structures
+-----------------------------------
 .. image:: images/erd.svg
 
 
@@ -74,48 +60,3 @@ Entity Relationship and Structure
    load.rst
    person.rst
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

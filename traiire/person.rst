@@ -2,8 +2,8 @@
 Person
 ######
 
-Under Construction
-******************
+(Under Construction)
+
 人間を管理するための単位。具体的には、マイナンバーカードのidと1対1になるものと考える。
 
 .. list-table:: Person
