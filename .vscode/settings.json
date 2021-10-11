@@ -1,4 +1,3 @@
 {
-    "makefile.extensionOutputFolder": "./.vscode",
-    "restructuredtext.confPath": "${workspaceFolder}"
+    "makefile.extensionOutputFolder": "./.vscode"
 }
