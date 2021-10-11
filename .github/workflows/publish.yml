@@ -24,11 +24,10 @@ jobs:
       with:
         python-version: '3.9'
     
-    - name: Install python3.9-dev
+    - name: Update environment
       run: |
         sudo apt-get update
         sudo apt-get upgrade
-        sudo apt-get install python3.9-dev
         
     - name: Install pipenv
       run: |
@@ -64,6 +63,6 @@ jobs:
       with:
         app-name: 'docs-traisare'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cf361e7992124be0aec5b5b247bd17d1 }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ./_build/html/
 
