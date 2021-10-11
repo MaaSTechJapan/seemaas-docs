@@ -10,6 +10,7 @@ myst-parser = "*"
 eralchemy = "*"
 pygraphviz = "*"
 recommonmark = "*"
+graphviz = "*"
 
 [dev-packages]
 
