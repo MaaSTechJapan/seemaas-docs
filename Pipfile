@@ -15,3 +15,6 @@ recommonmark = "*"
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+make_html = "make html"
