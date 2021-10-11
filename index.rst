@@ -17,7 +17,7 @@ TraISARE( **Tra**\nsport \ **I**\nformation \ **S**\tore with \ **A**\ggregator,
 
    ./sysconfig/index.rst
    ./rawdata/index.rst
-   ./traiire/index.rstgit pu
+   ./traiire/index.rst
    ./transam/index.rst
  
 Indices and tables
