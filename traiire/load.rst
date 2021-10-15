@@ -6,7 +6,7 @@ LoadはTransportationに積載され移動する主体を集計したもので�
    :widths: 15 10 10 10 10 30
    :header-rows: 1
 
-   * - Column
+   * - Name
      - Type
      - Required?
      - Nullable?
@@ -84,18 +84,12 @@ LoadはTransportationに積載され移動する主体を集計したもので�
      - False
      - person
      - countの単位を表す。
-   * - parents
+   * - persons
      - List[String]
      - True
      - True
-     - 
-     - 大人の情報をもつPersonの集合を表す。
-   * - chidlren
-     - List[String]
-     - True
-     - True
-     - 
-     - 子供の情報をもつPersonの集合を表す。
+     - [7cc6404d-cc46-ce30-79ed-e0e6214b7eb1, 65fa4cf7-a53a-4133-8c2a-2e01a13547e8, b1025dc8-21de-7eaf-c2e3-b91da51aa0e5, 778ba0b0-ac39-c1fe-4213-ddb27becdd4a]
+     - Loadを構成しているPersonの集合を表す。
    * - fare
      - Int
      - True

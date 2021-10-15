@@ -16,7 +16,7 @@ subtypeは以下から選択するものとする。
    :widths: 15 10 10 10 10 30
    :header-rows: 1
 
-   * - Column
+   * - Name
      - Type
      - Required?
      - Nullable?
@@ -88,13 +88,7 @@ subtypeは以下から選択するものとする。
      - False
      - 1c7f008a-ae84-6763-ae45-6839d83f8995
      - Nodeを所有、運営するOperatorのuid
-   * - geometry
-     - GeoJSON
-     - True
-     - False
-     - {"type": "Point", "coordinates": [134.59527,34.48426]}
-     - 出典における地理位置
-   * - geom
+   * - WKT
      - Well-Know-Text
      - True
      - False

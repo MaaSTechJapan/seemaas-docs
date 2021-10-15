@@ -73,13 +73,7 @@ GeoEssential
      - False
      - 
      - 同一基底におけるデータのカテゴリを表す。
-   * - geometry
-     - GeoJSON
-     - True
-     - False
-     - {"type": "LineString", "coordinates": [134.59527,34.48426]}
-     - 地理情報
-   * - geom
+   * - WKT
      - Well-Know-Text
      - True
      - False

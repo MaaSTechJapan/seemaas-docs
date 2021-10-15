@@ -7,7 +7,7 @@ Legをtrip chain化したものである。つまり、LoadのODを表すもの�
    :widths: 15 10 10 10 10 30
    :header-rows: 1
 
-   * - Column
+   * - Name
      - Type
      - Required?
      - Nullable?
@@ -97,13 +97,7 @@ Legをtrip chain化したものである。つまり、LoadのODを表すもの�
      - False
      - 51bc0050-9428-14ef-b018-834d56c4d10b
      - Tripとして記録されている利用者の情報をまとめたLoadを表す。
-   * - geometry
-     - GeoJSON
-     - True
-     - True
-     - {"type": "LineString", "coordinates": [[134.59527,34.48426],[135.00000,35.00000]]}
-     - 地理情報
-   * - geom
+   * - WKT
      - Well-Know-Text
      - True
      - True
