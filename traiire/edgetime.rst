@@ -7,7 +7,7 @@ EdgetimeはEdgeに時刻情報を付加したものである。
    :widths: 15 10 10 10 10 30
    :header-rows: 1
    
-   * - Column
+   * - Name
      - Type
      - Required?
      - Nullable?

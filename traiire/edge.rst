@@ -17,7 +17,7 @@ Edgeは運行事業者が所有するものとする。
    :widths: 15 10 10 10 10 30
    :header-rows: 1
 
-   * - Column
+   * - Name
      - Type
      - Required?
      - Nullable?
@@ -101,13 +101,7 @@ Edgeは運行事業者が所有するものとする。
      - False
      - 70e25ccc-82d2-fec2-faf5-2841720287a0
      - 終点側のNode
-   * - geometry
-     - GeoJSON
-     - True
-     - False
-     - {"type": "LineString", "coordinates": [[134.59527,34.48426],[135.00000,35.00000]]}
-     - 出典におけるLine形状
-   * - geom
+   * - WKT
      - Well-Know-Text
      - True
      - False

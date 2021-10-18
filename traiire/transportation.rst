@@ -18,7 +18,7 @@ subtypeは下記から選択するものとする
    :widths: 15 10 10 10 10 30
    :header-rows: 1
    
-   * - Column
+   * - Name
      - Type
      - Required?
      - Nullable?

@@ -6,7 +6,7 @@ Operatorは実体を運用・保守・管理する組織を表す。実空間で
    :widths: 15 10 10 10 10 30
    :header-rows: 1
 
-   * - Column
+   * - Name
      - Type
      - Required?
      - Nullable?
@@ -72,15 +72,9 @@ Operatorは実体を運用・保守・管理する組織を表す。実空間で
      - False
      - 
      - 同一基底におけるデータのカテゴリを表す。
-   * - geometry
-     - GeoJSON
-     - True
-     - False
-     - {"type": "LineString", "coordinates": [134.59527,34.48426]}
-     - 本店又は主たる事務所の所在地をgeocodingしたもの
-   * - geom
+   * - WKT
      - Well-Know-Text
      - True
      - False
-     - 
+     - POINT (134.59527 34.48426)
      - 本店又は主たる事務所の所在地をgeocodingしたもの

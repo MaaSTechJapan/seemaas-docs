@@ -75,17 +75,11 @@ TraIIReではいずれの集合もGraphと呼ぶ。交通データにおいてGr
      - False
      - Railway
      - 同一基底におけるデータのカテゴリを表す。
-   * - geometry
-     - GeoJSON
-     - True
-     - False
-     - {"type": "LineString", "coordinates": [134.59527,34.48426]}
-     - 地理情報
-   * - geom
+   * - WKT
      - Well-Know-Text
      - True
      - False
-     - POINT (134.59527 34.48426)
+     - LINESTRING ((134.59527,34.48426),(135.00000,35.00000))
      - 地理情報
    * - legs
      - List[Dict{Int:String}]
