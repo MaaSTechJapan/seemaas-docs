@@ -13,6 +13,8 @@ Edgeは運行事業者が所有するものとする。
 - Edge::Searoute
 - Edge::Walkroute
 
+Properties
+----------
 .. list-table:: Edge
    :widths: 15 10 10 10 10 30
    :header-rows: 1
@@ -38,7 +40,7 @@ Edgeは運行事業者が所有するものとする。
    * - oid
      - String
      - True
-     - False
+     - True
      - f"{from_node},{to_node}"
      - 起点と終点の2つのNodeのuidをセパレータのカンマ(,)で区切った文字列である。
    * - title
@@ -101,9 +103,17 @@ Edgeは運行事業者が所有するものとする。
      - False
      - 70e25ccc-82d2-fec2-faf5-2841720287a0
      - 終点側のNode
-   * - WKT
+   * - wkt
      - Well-Know-Text
      - True
      - False
      - LINESTRING ((134.59527,34.48426),(135.00000,35.00000))
      - 出典におけるLine形状
+
+Inheritances
+------------
+各交通モードにおいて、乗り場はそれぞれ固有のプロパティを持つ。
+そのため、各交通モードにおいてNodeを継承したオブジェクトを生成する。
+継承先では、図に示す継承先名称をtypeに設定し、それぞれの継承先では固有のプロパティを定義することを可能にする。
+
+.. image:: images/class_edge.svg

@@ -28,7 +28,7 @@ Legをtrip chain化したものである。つまり、LoadのODを表すもの�
    * - oid
      - String
      - True
-     - False
+     - True
      - 497f6eca-6276-4993-bfeb-53cbbbba6f08
      - 出典があるデータの場合は出典のユニークid、出典がない場合はuidと同一の値を格納する。
    * - title
@@ -97,7 +97,7 @@ Legをtrip chain化したものである。つまり、LoadのODを表すもの�
      - False
      - 51bc0050-9428-14ef-b018-834d56c4d10b
      - Tripとして記録されている利用者の情報をまとめたLoadを表す。
-   * - WKT
+   * - wkt
      - Well-Know-Text
      - True
      - True

@@ -28,7 +28,7 @@ EdgetimeはEdgeに時刻情報を付加したものである。
    * - oid
      - String
      - True
-     - False
+     - True
      - 
      - 出典があるデータの場合は出典のユニークid、出典がない場合はuidと同一の値を格納する。
    * - title
@@ -73,6 +73,12 @@ EdgetimeはEdgeに時刻情報を付加したものである。
      - False
      - 
      - 同一基底におけるデータのカテゴリを表す。
+   * - sequence
+     - Int
+     - True
+     - False
+     - 1
+     - Edgeの並び順を定義する。
    * - edge
      - String
      - True
@@ -109,19 +115,25 @@ EdgetimeはEdgeに時刻情報を付加したものである。
      - False
      - 
      - transportationのuid
+   * - graph
+     - String
+     - True
+     - False
+     - 
+     - 運行路線名を表す。
    * - calendar
      - List[Int]
      - True
      - False
      - [1,1,1,1,1,0,0,0]
-     - 運行曜日を8bitであらわす
-   * - operation_day
+     - 運行曜日を8bitで表す。
+   * - operation_days
      - String
      - True
      - False
      - [Timestamp]
      - 運行日
-   * - exception_day
+   * - exception_days
      - String
      - True
      - False

@@ -31,7 +31,7 @@ Person
    * - oid
      - String
      - True
-     - False
+     - True
      - 
      - 出典があるデータの場合は出典のユニークid、出典がない場合はuidと同一の値を格納する。
    * - title

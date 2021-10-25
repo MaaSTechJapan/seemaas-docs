@@ -30,7 +30,7 @@ Legは乗降履歴を格納するフォーマットとして設計するが、�
    * - oid
      - String
      - True
-     - False
+     - True
      - 
      - 出典があるデータの場合は出典のユニークid、出典がない場合はuidと同一の値を格納する。
    * - title
@@ -92,14 +92,14 @@ Legは乗降履歴を格納するフォーマットとして設計するが、�
      - True
      - False
      - 90c1a642-7081-6138-05e3-27bec669b6de
-     - 移動に使用した乗り物のを表す。
+     - 移動に使用した乗り物のuidを表す。
    * - load
      - String
      - True
      - False
      - 51bc0050-9428-14ef-b018-834d56c4d10b
      - Legとして記録されている利用者の情報をまとめたLoadを表す。
-   * - WKT
+   * - wkt
      - Well-Know-Text
      - True
      - False
