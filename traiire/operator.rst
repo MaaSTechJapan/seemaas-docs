@@ -27,7 +27,7 @@ Operatorは実体を運用・保守・管理する組織を表す。実空間で
    * - oid
      - String
      - True
-     - False
+     - True
      - 
      - 法人番号
    * - title
@@ -72,7 +72,7 @@ Operatorは実体を運用・保守・管理する組織を表す。実空間で
      - False
      - 
      - 同一基底におけるデータのカテゴリを表す。
-   * - WKT
+   * - wkt
      - Well-Know-Text
      - True
      - False

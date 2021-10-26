@@ -28,7 +28,7 @@ EdgetimeはEdgeに時刻情報を付加したものである。
    * - oid
      - String
      - True
-     - False
+     - True
      - 
      - 出典があるデータの場合は出典のユニークid、出典がない場合はuidと同一の値を格納する。
    * - title
@@ -69,10 +69,16 @@ EdgetimeはEdgeに時刻情報を付加したものである。
      - データが使用している基底の種類を表す。
    * - subtype
      - String
-     - True
+     - False
      - False
      - 
      - 同一基底におけるデータのカテゴリを表す。
+   * - sequence
+     - Int
+     - True
+     - False
+     - 1
+     - Edgeの並び順を定義する。
    * - edge
      - String
      - True
@@ -82,13 +88,13 @@ EdgetimeはEdgeに時刻情報を付加したものである。
    * - departure_time
      - Timestamp
      - True
-     - False
+     - True
      - 1970-01-01T05:11:00
      - Edge始点の出発時刻
    * - arrival_time
      - Timestamp
      - True
-     - False
+     - True
      - 1970-01-01T05:13:00
      - Edge終点への到着時刻
    * - geton_type
@@ -109,21 +115,27 @@ EdgetimeはEdgeに時刻情報を付加したものである。
      - False
      - 
      - transportationのuid
+   * - graph
+     - String
+     - True
+     - True
+     - 
+     - 運行路線名を表す。
    * - calendar
      - List[Int]
      - True
      - False
      - [1,1,1,1,1,0,0,0]
-     - 運行曜日を8bitであらわす
-   * - operation_day
+     - 運行曜日を8bitで表す。
+   * - operation_days
      - String
      - True
      - False
-     - [Timestamp]
+     - [2021-10-26T00:00:00+09:00, 2021-10-27T00:00:00+09:00]
      - 運行日
-   * - exception_day
+   * - exception_days
      - String
      - True
      - False
-     - [Timestamp]
+     - [2021-10-21T00:00:00+09:00, 2021-10-28T00:00:00+09:00]
      - 除外日

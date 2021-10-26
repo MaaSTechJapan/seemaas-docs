@@ -20,17 +20,17 @@ TraIIReではいずれの集合もGraphと呼ぶ。交通データにおいてGr
      - True
      - False
      -  
-     - Primary keyを格納する。
+     - データに対する固有識別子(UUIDv4)を格納する。
    * - uid
      - String
      - True
      - False
      - f13c6846-e336-069c-90a6-8ac8b65fa9d8
-     - Unique idを格納する。
+     - Entityに対する固有識別子を格納する。
    * - oid
      - String
      - True
-     - False
+     - True
      - JJ
      - 出典があるデータの場合は出典のユニークid、出典がない場合はuidと同一の値を格納する。
    * - title
@@ -75,24 +75,25 @@ TraIIReではいずれの集合もGraphと呼ぶ。交通データにおいてGr
      - False
      - Railway
      - 同一基底におけるデータのカテゴリを表す。
-   * - WKT
+   * - wkt
      - Well-Know-Text
      - True
      - False
      - LINESTRING ((134.59527,34.48426),(135.00000,35.00000))
      - 地理情報
-   * - legs
-     - List[Dict{Int:String}]
-     - True
-     - False
-     - [{1:c170e4ec-48e2-2ba8-8157-cf0795efdaa9},{2:b81daeca-8b8e-fb01-8ac6-4dafd198916f},{3:db5280d3-ca7e-6e18-bfb1-64487b1a1478}]
-     - Graphを構成するEdgeの集合
    * - operator
      - String
      - True
      - False
      - 1c7f008a-ae84-6763-ae45-6839d83f8995
      - Graphを所有、運営するOperatorのuid
+   * - edges
+     - List[Dict{Int:String}]
+     - True
+     - False
+     - [{1:c170e4ec-48e2-2ba8-8157-cf0795efdaa9},{2:b81daeca-8b8e-fb01-8ac6-4dafd198916f},{3:db5280d3-ca7e-6e18-bfb1-64487b1a1478}]
+     - Graphを構成するEdgeの集合
+
 
 
 

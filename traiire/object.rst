@@ -1,12 +1,10 @@
 ######
-Person
+Object
 ######
 
-(Under Construction)
+人、モノなどの主体の属性を表す
 
-人間を管理するための単位。具体的には、マイナンバーカードのidと1対1になるものと考える。
-
-.. list-table:: Person
+.. list-table:: Object
    :widths: 15 10 10 10 10 30
    :header-rows: 1
    
@@ -21,17 +19,17 @@ Person
      - True
      - False
      -  
-     - Primary keyを格納する。
+     - データに対する固有識別子(UUIDv4)を格納する。
    * - uid
      - String
      - True
      - False
      - 
-     - Unique idを格納する。
+     - Entityに対する固有識別子を格納する。
    * - oid
      - String
      - True
-     - False
+     - True
      - 
      - 出典があるデータの場合は出典のユニークid、出典がない場合はuidと同一の値を格納する。
    * - title
@@ -73,6 +71,6 @@ Person
    * - subtype
      - String
      - True
-     - False
+     - True
      - 
      - 同一基底におけるデータのカテゴリを表す。

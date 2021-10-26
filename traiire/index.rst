@@ -40,7 +40,7 @@ Class名.Property名という形式でPropertyが記述されたときは、当�
 
 Entity Relationships and Structures
 -----------------------------------
-.. image:: images/erd.svg
+.. image:: images/class_node.svg
 
 
 
@@ -57,6 +57,5 @@ Entity Relationships and Structures
    transportation.rst
    leg.rst
    trip.rst
-   load.rst
-   person.rst
+   object.rst
    
