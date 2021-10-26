@@ -26,13 +26,13 @@ Properties
      - True
      - False
      - 
-     - Primary keyを格納する。
+     - データに対する固有識別子(UUIDv4)を格納する。
    * - uid
      - String
      - True
      - False
      - str(uuid.uuid4())
-     - Unique idを格納する。
+     - Entityに対する固有識別子を格納する。
    * - oid
      - String
      - True
@@ -93,18 +93,19 @@ Properties
      - False
      - POINT (134.59527, 34.48426)
      - 出典における地理位置
-   * - h3
-     - String
-     - True
-     - False
-     - abc123456
-     - 出典における地理位置をh3へ変換したもの
    * - address
      - String
      - False
      - False
      - 茨城県龍ヶ崎市
      - 地理位置を逆geocodingした住所、titleだけでは別地域で重複が発生する可能性が高いので、可読性のある住所で判別できるようにしておく。
+   * - h3
+     - String
+     - True
+     - False
+     - abc123456
+     - 出典における地理位置をh3へ変換したもの
+
 
 Inheritances
 ------------

@@ -57,6 +57,5 @@ Entity Relationships and Structures
    transportation.rst
    leg.rst
    trip.rst
-   load.rst
-   person.rst
+   object.rst
    

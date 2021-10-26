@@ -76,13 +76,13 @@ subtypeは下記から選択するものとする
      - String
      - True
      - False
-     - Transportation
+     - Train
      - データが使用している基底の種類を表す。
    * - subtype
      - String
-     - True
      - False
-     - Train
+     - False
+     - 
      - 同一基底におけるデータのカテゴリを表す。
    * - operator
      - String

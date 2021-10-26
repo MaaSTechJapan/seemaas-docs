@@ -18,13 +18,13 @@ GeoEssential
      - True
      - False
      -  
-     - Primary keyを格納する。
+     - データに対する固有識別子(UUIDv4)を格納する。
    * - uid
      - String
      - True
      - False
      - 
-     - Unique idを格納する。
+     - Entityに対する固有識別子を格納する。
    * - oid
      - String
      - True
@@ -69,10 +69,16 @@ GeoEssential
      - データが使用している基底の種類を表す。
    * - subtype
      - String
-     - True
+     - False
      - False
      - 
      - 同一基底におけるデータのカテゴリを表す。
+   * - note
+     - String
+     - False
+     - False
+     - 
+     - 特記事項。
    * - wkt
      - Well-Know-Text
      - True

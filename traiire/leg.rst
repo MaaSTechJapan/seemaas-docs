@@ -72,7 +72,7 @@ Legは乗降履歴を格納するフォーマットとして設計するが、�
    * - subtype
      - String
      - True
-     - False
+     - True
      - Result
      - データが実績値なのか、予定なのか、予測値なのかを表す。
    * - from_node
@@ -93,15 +93,15 @@ Legは乗降履歴を格納するフォーマットとして設計するが、�
      - False
      - 90c1a642-7081-6138-05e3-27bec669b6de
      - 移動に使用した乗り物のuidを表す。
-   * - load
+   * - fare
+     - Int
+     - True
+     - True
+     - 580
+     - 移動に要した運賃、費用を表す
+   * - unit_fare
      - String
      - True
-     - False
-     - 51bc0050-9428-14ef-b018-834d56c4d10b
-     - Legとして記録されている利用者の情報をまとめたLoadを表す。
-   * - wkt
-     - Well-Know-Text
      - True
-     - False
-     - LINESTRING ((134.59527,34.48426),(135.00000,35.00000))
-     - 地理情報
+     - JPY
+     - fareの単位 Unit of the fare

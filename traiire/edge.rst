@@ -30,7 +30,7 @@ Properties
      - True
      - False
      -  
-     - Primary keyを格納する。
+     - データに対する固有識別子(UUIDv4)を格納する。
    * - uid
      - String
      - True
@@ -81,10 +81,16 @@ Properties
      - データが使用している基底の種類を表す。
    * - subtype
      - String
+     - False
+     - False
+     - 
+     - 同一基底におけるデータのカテゴリを表す。
+   * - wkt
+     - Well-Know-Text
      - True
      - False
-     - Railway
-     - 同一基底におけるデータのカテゴリを表す。
+     - LINESTRING ((134.59527,34.48426),(135.00000,35.00000))
+     - 出典におけるLine形状
    * - operator
      - String
      - True
@@ -103,12 +109,7 @@ Properties
      - False
      - 70e25ccc-82d2-fec2-faf5-2841720287a0
      - 終点側のNode
-   * - wkt
-     - Well-Know-Text
-     - True
-     - False
-     - LINESTRING ((134.59527,34.48426),(135.00000,35.00000))
-     - 出典におけるLine形状
+
 
 Inheritances
 ------------
