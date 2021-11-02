@@ -42,20 +42,11 @@ Entity Relationships and Structures
 -----------------------------------
 .. image:: images/class_node.svg
 
-
-
 .. toctree::
    :maxdepth: 2
 
-   essential.rst
-   geoessential.rst
-   operator.rst
-   node.rst
-   edge.rst
-   graph.rst
-   edgetime.rst
-   transportation.rst
-   leg.rst
-   trip.rst
-   object.rst
+   TraIIRe.md
+   Train.md
+   Bus.md
+   PersonTravel.md
    
