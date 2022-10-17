@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+mistune = "<2.0.0"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 myst-parser = "*"
@@ -12,9 +13,10 @@ python-dotenv = "*"
 sphinxcontrib-openapi = "*"
 
 [dev-packages]
+sphinx-autobuild = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
 
 [scripts]
 make_html = "make html"
