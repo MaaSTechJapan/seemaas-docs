@@ -1,7 +1,14 @@
 # docs-traisare::Documents about TraISARE
+
+# 編集方法
+
+```bash
+# Auto reload
+sphinx-autobuild docs docs/_build/html
 ```
 
 # 古いSpecをポートする
+
 ## 環境構築
 ```
 $ gem install asciidoctor
@@ -42,6 +49,7 @@ $(docs-traisare) make clean
 ER alchemy: https://blog.amedama.jp/entry/2017/12/30/063023
 
 ## 環境
+
 ### ER alchemy:
 ```
 $ pipenv install eralchemy
